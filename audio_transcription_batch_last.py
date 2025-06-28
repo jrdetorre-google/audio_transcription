@@ -93,37 +93,45 @@ class AudioTranscription:
             type = genai.types.Type.OBJECT,
             required = ["line_number", "speaker","init_time","end_time","duration","language_code","message","tone","alert","pii"],
             properties = {
-                "line_number": genai.types.Schema(
-                    type = genai.types.Type.STRING,
-                ),
-                "speaker": genai.types.Schema(
-                    type = genai.types.Type.STRING,
-                ),
-                "init_time": genai.types.Schema(
-                    type = genai.types.Type.STRING,
-                ),
-                "end_time": genai.types.Schema(
-                    type = genai.types.Type.STRING,
-                ),
-                "duration": genai.types.Schema(
-                    type = genai.types.Type.STRING,
-                ),
-                "language_code": genai.types.Schema(
-                    type = genai.types.Type.STRING,
-                ),
-                "message": genai.types.Schema(
-                    type = genai.types.Type.STRING,
-                ),
-                "tone": genai.types.Schema(
-                    type = genai.types.Type.STRING,
-                ),
-                "alert": genai.types.Schema(
-                    type = genai.types.Type.STRING,
-                ),
-                "pii": genai.types.Schema(
-                    type = genai.types.Type.STRING,
-                ),
-                },
+                "secuence": {
+                    "type": "ARRAY",
+                    "items": {
+                        "type": "OBJECT",
+                        "properties": {
+                            "line_number": genai.types.Schema(
+                                type = genai.types.Type.STRING,
+                            ),
+                            "speaker": genai.types.Schema(
+                                type = genai.types.Type.STRING,
+                            ),
+                            "init_time": genai.types.Schema(
+                                type = genai.types.Type.STRING,
+                            ),
+                            "end_time": genai.types.Schema(
+                                type = genai.types.Type.STRING,
+                            ),
+                            "duration": genai.types.Schema(
+                                type = genai.types.Type.STRING,
+                            ),
+                            "language_code": genai.types.Schema(
+                                type = genai.types.Type.STRING,
+                            ),
+                            "message": genai.types.Schema(
+                                type = genai.types.Type.STRING,
+                            ),
+                            "tone": genai.types.Schema(
+                                type = genai.types.Type.STRING,
+                            ),
+                            "alert": genai.types.Schema(
+                                type = genai.types.Type.STRING,
+                            ),
+                            "pii": genai.types.Schema(
+                                type = genai.types.Type.STRING,
+                            ),
+                            },
+                        }
+                    }
+                }
             ),
         )
 
