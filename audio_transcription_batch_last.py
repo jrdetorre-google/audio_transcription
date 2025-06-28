@@ -41,15 +41,15 @@ class AudioTranscription:
             Es importante que el orden de salida sea el orden real de la conversación y los timestamps sean correctos.
             Tiene que estar la transcripción completa, no puede faltar nada de lo que se ha dicho en la llamada.
             Devuelve el resultado en una tabla que contenga los siguientes campos, con una fila con cada mensaje comunicado por un hablante. 
-            line_number: Código secuencial correspondiente a cada nueva línea 
-            speaker: Hablante que interviene en cada nueva secuencia del mensaje. Si es una secuencia con silencio identifícalo con hablante \"Silencio\" 
-            init_time: Tiempo de inicio de cada secuencia del mensaje, expresado con respecto al inicio de la llamada expresado en minutos:segundos 
-            end_time: Tiempo de fin de cada secuencia del mensaje, expresado con respecto al inicio de la llamada expresado en minutos:segundos 
-            duration: La duración de la secuencia. debería ser igual a Tiempo fin - Tiempo inicial expresado en minutos:segundos 
+            line_number: Código secuencial correspondiente a cada nueva línea. 
+            speaker: Hablante que interviene en cada nueva secuencia del mensaje. Si es una secuencia con silencio identifícalo con hablante \"Silencio\". 
+            init_time: Tiempo de inicio de cada secuencia del mensaje, expresado con respecto al inicio de la llamada expresado en minutos y segundos con formato MM:SS. 
+            end_time: Tiempo de fin de cada secuencia del mensaje, expresado con respecto al inicio de la llamada expresado en minutos y segundos con formato MM:SS. 
+            duration: La duración de la secuencia. debería ser igual a Tiempo fin - Tiempo inicial expresado en minutos y segundos con formato MM:SS. 
             language_code: Código iso del, por ejemplo es-es, es-co, en-en... 
             message: Texto escrito de la secuencia del mensaje. Si hay alguna secuencia con silencio introduce aquí alguna descripción de qué está pasando, si hay ruido de fondo, de qué tipo o cualquier mensaje descriptivo que consideres importante. No inventes, por favor. 
-            tone. Emoción principal de la secuencia. Interesa principalmente Neutra, Irritada, Conciliadora, pero incluye cualquier otra que necesites 
-            alert: Rellena este campo con \"Ojo\", si ves que hay palabras malsonantes, amenazas, una falta de respeto o la conversación es violenta. Déjalo vacío si no es el caso. No pongas otras cosas que no sea \"Ojo\" 
+            tone. Emoción principal de la secuencia. Interesa principalmente Neutra, Irritada, Conciliadora, pero incluye cualquier otra que necesites. 
+            alert: Rellena este campo con \"Ojo\", si ves que hay palabras malsonantes, amenazas, una falta de respeto o la conversación es violenta. Déjalo vacío si no es el caso. No pongas otras cosas que no sea \"Ojo\". 
             pii: Incluye aquí los datos personales que identifiques en la secuencia. Puede ser una identidad con nombre y apellidos, una dirección, un identificador de cliente...             
             """)
 
