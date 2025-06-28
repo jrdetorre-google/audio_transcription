@@ -91,7 +91,7 @@ class AudioTranscription:
             response_mime_type="application/json",
             response_schema=genai.types.Schema(
             type = genai.types.Type.OBJECT,
-            required = ["line_number", "speaker","init_time","end_time","duration","language_code","message","tone","alert","pii"],
+#            required = ["line_number", "speaker","init_time","end_time","duration","language_code","message","tone","alert","pii"],
             properties = {
                 "secuence": {
                     "type": "ARRAY",
